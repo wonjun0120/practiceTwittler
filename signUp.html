@@ -1,0 +1,49 @@
+<!--회원가입 창
+    유효성 검사 
+    입력
+        1.아이디
+        2.비밀번호
+        3.비밀번호 확인
+        4.전화번호
+    제약조건
+        1. 아이디는 8자 이상, 중복 X
+        2. 비밀번호에는 특수문자 포함, 8자리 이상, 비밀번호 확인과 같아야함
+        3. 전화번호 해당 양식과 맞아야함, 중복 X
+
+    키보드로 입력받음과 동시에 결과창 출력
+-->
+
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sign Up</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="signUpStyle.css" />
+    </head>
+    <body>  
+        <form id='userForm' name='userData'>
+            <div id = 'enterId'>
+                아이디 입력<input type="text" id="user_id" value="아이디 입력">
+                <span id='idMessage' class="failed"> 아이디가 8자리 이상이어야 합니다.</span>
+            </div>
+            <div id = 'enterPW'>
+                비밀번호 입력<input type="password" id="user_pw">
+                <span id='pwMessage' class="failed"> 비밀번호가 8자리 이상이어야 합니다.</span>
+            </div>
+            <div id = 'checkPW'>
+                비밀번호 확인<input type="password" id="check_pw">
+                <span id='checkPwMessage' class="failed"> 비밀번호를 확인해주세요</span>
+            </div>
+            <div id = 'enterPhone'>
+                전화번호<input type="tel" id="user_phn1" style="width: 50px;"> - 
+                <input type="tel" id="user_phn2" style="width: 50px;"> - <input type="tel" id="user_phn3" style="width: 50px;">
+                <span id='phNumMessage' class="failed"> 전화번호를 확인해주세요</span>
+            </div>
+            <button id = 'submit'>가입</button>
+        </form>
+
+        <script src="script.js"></script>
+        <script src="singUpFormVaildation.js"></script>
+    </body>
+    
+</html>
